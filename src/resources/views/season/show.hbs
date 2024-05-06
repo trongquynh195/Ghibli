@@ -1,0 +1,24 @@
+<ul class="MovieList Rows AX A06 B04 C03 E20">
+    {{#each actionMovies}}
+    <li class="TpostMv">
+        <article id=""
+            class="TPost C post-5054 post type-post status-publish format-standard has-post-thumbnail hentry">
+            <a href="/phim/{{this.slug}}">
+                <div class="Image">
+                    <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="215" height="320" src={{this.poster}}
+                            class="attachment-thumbnail size-thumbnail wp-post-image"
+                            alt="Shangri-La Frontier - Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su, Shangri-La Frontier: Crappy Game Hunter Challenges God-Tier Game (2023)"
+                            title="Shangri-La Frontier (2023)"></figure>
+                    <span class="mli-eps">TẬP<i>20</i></span>
+                    <div class="anime-extras">
+                        <div class="anime-avg-user-rating" title="9.8 trong số 10 dựa trên 683 thành viên đánh giá"
+                            data-action="click->anime-card#showLibraryEditor"><i class="fa fa-star"></i>9.8
+                        </div>
+                    </div>
+                </div>
+                <h2 class="Title">{{this.title}}</h2> <span class="Year">Lượt xem: 4,424,021</span>
+            </a>
+        </article>
+    </li>
+    {{/each}}
+</ul>

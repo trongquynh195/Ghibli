@@ -1,0 +1,64 @@
+<div class="containers">
+    <form method="POST" action="/v1/auth/register">
+        <div class="form signup">
+            <h2>Sign Up</h2>
+            <div class="inputBox">
+                <input type="text" required="required" name="username" />
+                <i class="fa-regular fa-user"></i>
+                <span>Tên tài khoản</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required" name="email" />
+                <i class="fa-regular fa-envelope"></i>
+                <span>Địa chỉ Email</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required" name="password" />
+                <i class="fa-solid fa-lock"></i>
+                <span>Tạo mật khẩu</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required" />
+                <i class="fa-solid fa-lock"></i>
+                <span>Xác nhận mật khẩu</span>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Tạo tài khoản" />
+            </div>
+            <p>Bạn đã đăng ký chưa ? <a href="#" class="login">Đăng nhập</a></p>
+        </div>
+    </form>
+    <form method="POST" action="/v1/auth/login" class="div-signin">
+        <div class="form signin">
+            <h2>Log in</h2>
+            <div class="inputBox">
+                <input type="text" required="required" name="username" />
+                <i class="fa-regular fa-user"></i>
+                <span>Tên tài khoản</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required" name="password" />
+                <i class="fa-solid fa-lock"></i>
+                <span>Mật khẩu</span>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Đăng nhập" />
+            </div>
+            <p>Bạn chưa có tài khoản ? <a href="#" class="create"><strong>Tạo một tài khoản</strong></a></p>
+        </div>
+    </form>
+</div>
+
+<script>
+    let login = document.querySelector(".login");
+    let create = document.querySelector(".create");
+    let container = document.querySelector(".containers");
+
+    create.onclick = function () {
+        container.classList.add("signinForm");
+    };
+
+    login.onclick = function () {
+        container.classList.remove("signinForm");
+    };
+</script>

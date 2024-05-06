@@ -1,0 +1,77 @@
+<section class="Wdgt A" id="showTopPhim">
+    <div class="Title">HOT TUẦN<div class="Top">
+            <a href="#" class="STPb Current" title="Anime TV/Series xem nhiều nhất tuần"
+                data-tag="top-bo-week">TV/Series</a>
+            <a href="#" class="STPb" title="Movie/OVA xem nhiều nhất tuần" data-tag="top-le-week">Movie/OVA</a>
+        </div>
+    </div>
+    <ul class="MovieList on" id="top-bo-week">
+        {{#each top_bo}}
+        <li>
+            <div class="TPost A"> <a rel="bookmark" href="/phim/{{this.slug}}/"> <span class="Top">#{{sum @index
+                        1}}<i></i></span>
+                    <div class="Image">
+                        <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="55" height="85" src="{{this.poster}}"
+                                class="attachment-img-mov-sm size-img-mov-sm wp-post-image" alt={{this.title}}></figure>
+                    </div>
+                    <div class="Title">{{this.title}}</div>
+                </a>
+                <p class="Info"> <span class="Vote AAIco-star">
+                        <i class="fa fa-star"></i>
+                        9.1</span><span class="Time AAIco-access_time">{{this.InfoList.Duration}}</span> <span
+                        class="Date AAIco-date_range">{{this.InfoList.Season.[1]}}</span>
+                    <span class="Qlty">{{this.InfoList.Quality}}</span>
+                </p>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    <ul class="MovieList" id="top-le-week">
+        {{#each top_le}}
+        <li>
+            <div class="TPost A"> <a rel="bookmark" href="/phim/{{this.slug}}/"> <span class="Top">#{{sum @index
+                        1}}<i></i></span>
+                    <div class="Image">
+                        <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="55" height="85" src="{{this.poster}}"
+                                class="attachment-img-mov-sm size-img-mov-sm wp-post-image" alt={{this.title}}></figure>
+                    </div>
+                    <div class="Title">{{this.title}}</div>
+                </a>
+                <p class="Info"> <span class="Vote AAIco-star">9.9</span><span
+                        class="Time AAIco-access_time">{{this.InfoList.Duration}}</span> <span
+                        class="Date AAIco-date_range">{{this.InfoList.Season.[1]}}</span>
+                    <span class="Qlty">{{this.InfoList.Quality}}</span>
+                </p>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</section>
+<script>
+    const stpb = document.querySelectorAll('.STPb');
+    const MovieList = document.querySelectorAll('.Wdgt .MovieList');
+    document.querySelector('.Wdgt.A').addEventListener('click', function (event) {
+        console.log(event.target.classList.contains('STPb'));
+        if (event.target.classList.contains('STPb')) {
+            var clickedTabValue = event.target.getAttribute('data-tag');
+
+            var allTabs = document.querySelectorAll('.STPb');
+            console.log(allTabs)
+
+            allTabs.forEach(function (tab) {
+                tab.classList.remove('Current');
+            });
+            console.log(allTabs);
+
+            event.target.classList.add('Current');
+
+            var allTabContents = document.querySelectorAll('.MovieList');
+            allTabContents.forEach(function (tabContent) {
+                tabContent.classList.remove('on');
+            });
+
+            var clickedTabContent = document.getElementById(clickedTabValue);
+            clickedTabContent.classList.add('on');
+        }
+    });
+</script>

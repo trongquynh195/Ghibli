@@ -1,0 +1,207 @@
+<main>
+    <div class="MovieListSldCn">
+        <div class="MovieListSld owl-carousel owl-theme" style="opacity: 1; display: block;">
+            <div class="owl-wrapper-outer autoHeight" style="height: 350px;">
+                <div class="owl-wrapper"
+                    style="width: 14840px; left: 0px; display: block; transition: all 400ms ease 0s; transform: translate3d(0px, 0px, 0px);">
+                    {{#each movie}}
+                    <div class="owl-item" style="width: 836px;">
+                        <div class="TPostMv">
+                            <div class="TPost D">
+                                <a href="/phim/{{this.slug}}">
+                                    <div class="Image">
+                                        <figure class="Objf"><img class="TPostBg" src={{this.banner}} alt="Background">
+                                        </figure>
+                                    </div>
+                                </a>
+                                <div class="TPMvCn">
+                                    <a href="/phim/{{this.slug}}">
+                                        <div class="Title">{{this.title}}</div>
+                                    </a>
+                                    <p class="Info"> <span class="Vote AAIco-star"> <i class="fa fa-star"></i>294</span>
+                                        <span class="Time AAIco-access_time"> <i
+                                                class="fa fa-clock"></i>{{this.InfoList.Duration}}</span>
+                                        <span class="Date AAIco-date_range"> <i
+                                                class="fa-solid fa-calendar-days"></i>{{this.InfoList.Season.[1]}}</span>
+                                        <span class="Qlty">{{this.InfoList.Quality}}</span>
+                                    </p>
+                                    <div class="Description">
+                                        <p>{{this.description}}</p>
+                                        <p class="Studio AAIco-videocam"><span><i class="fa-solid fa-video"
+                                                    style="color: #b5e745;"></i>Studio:</span>{{this.InfoList.Director}}
+                                        </p>
+                                        <p class="Genre AAIco-movie_creation"><span><i class="fa-solid fa-list"
+                                                    style="color: #b5e745;"></i>Thể
+                                                Loại:</span>
+                                            {{#with this.InfoList.Genre as |theloai|}}
+                                            {{#each theloai}}
+                                            <a href="phim/the-loai/" title={{this}}>{{this}}</a>,
+                                            {{/each}}
+                                            {{/with}}
+                                            <i class="Button STPa AAIco-more_horiz">...</i>
+                                        </p>
+                                    </div>
+                                    <div class="Cast"> <img src="/img/cast-image_40.png" alt="" title=""><img
+                                            src="/img/cast-image_40.png" alt="" title=""><img
+                                            src="/img/cast-image_40.png" alt="" title=""><img
+                                            src="/img/cast-image_40.png" alt="" title=""><img
+                                            src="/img/cast-image_40.png" alt="" title=""> <button type="button"
+                                            class="Button STPa AAIco-more_horiz">...</button></div> <a
+                                        href="/phim/{{this.slug}}/" class="Button TPlay AAIco-play_arrow">Xem
+                                        <strong>Phim</strong></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="owl-controls clickable">
+                <div class="owl-pagination">
+                    <div class="owl-page actives"><span class=""></span></div>
+                    <div class="owl-page"><span class=""></span></div>
+                    <div class="owl-page"><span class=""></span></div>
+                    <div class="owl-page"><span class=""></span></div>
+                    <div class="owl-page"><span class=""></span></div>
+                    <div class="owl-page"><span class=""></span></div>
+                    <div class="owl-page"><span class=""></span></div>
+                    <div class="owl-page"><span class=""></span></div>
+                    <div class="owl-page"><span class=""></span></div>
+                    <div class="owl-page"><span class=""></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="single-home">
+        <div class="Top">
+            <h1>Anime Bộ <i class="fa fa-angle-right"></i></h1>
+            <a href="" class="STPb Current" data-tag="all" title="">Tất cả</a>
+            <a href="" class="STPb" data-tag="winter2024" title="">Phim</a>
+            <a href="" class="STPb " data-tag="animeSeries" title="">Phim</a>
+            <a href="" class="STPb " data-tag="animeSingle" title="">Phim</a>
+        </div>
+        <ul class="MovieList Rows AX A06 B04 C03 E20">
+            {{#each animebo}}
+            <li class="TpostMv">
+                <article id=""
+                    class="TPost C post-5054 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="/phim/{{this.slug}}">
+                        <div class="Image">
+                            <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="215" height="320"
+                                    src={{this.poster}} class="attachment-thumbnail size-thumbnail wp-post-image"
+                                    alt="Shangri-La Frontier - Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su, Shangri-La Frontier: Crappy Game Hunter Challenges God-Tier Game (2023)"
+                                    title="Shangri-La Frontier (2023)"></figure>
+                            <span class="mli-eps">TẬP<i>
+                                    {{#with this.InfoList.Episodes as |episodes|}}
+                                    {{#each episodes as |episode|}}
+                                    {{#if @last}}
+                                    {{episode.tap}}
+                                    {{/if}}
+                                    {{/each}}
+                                    {{/with}}</i></span>
+                            <div class="anime-extras">
+                                <div class="anime-avg-user-rating"
+                                    title="9.8 trong số 10 dựa trên 683 thành viên đánh giá"
+                                    data-action="click->anime-card#showLibraryEditor"><i class="fa fa-star"></i>9.8
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="Title">{{this.title}}</h2> <span class="Year">Lượt xem: 4,424,021</span>
+                    </a>
+                </article>
+            </li>
+            {{/each}}
+        </ul>
+        <a href="/the-loai/anime-bo" class="viewall">Xem thêm.. <i class="ion-ios-arrow-right"></i></a>
+        <div class="Top">
+            <h1>Anime Lẻ <i class="fa fa-angle-right"></i></h1>
+            <a href="" class="STPb Current" data-tag="all" title="">Tất cả</a>
+            <a href="" class="STPb" data-tag="winter2024" title="">Phim</a>
+            <a href="" class="STPb " data-tag="animeSeries" title="">Phim</a>
+            <a href="" class="STPb " data-tag="animeSingle" title="">Phim</a>
+        </div>
+        <ul class="MovieList Rows AX A06 B04 C03 E20">
+            {{#each animele}}
+            <li class="TpostMv">
+                <article id=""
+                    class="TPost C post-5054 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="/phim/{{this.slug}}">
+                        <div class="Image">
+                            <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="215" height="320"
+                                    src={{this.poster}} class="attachment-thumbnail size-thumbnail wp-post-image"
+                                    alt="Shangri-La Frontier - Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su, Shangri-La Frontier: Crappy Game Hunter Challenges God-Tier Game (2023)"
+                                    title="Shangri-La Frontier (2023)"></figure>
+                            <span class="mli-quality">{{this.InfoList.Quality}}</span>
+                            <div class="anime-extras">
+                                <div class="anime-avg-user-rating"
+                                    title="9.8 trong số 10 dựa trên 683 thành viên đánh giá"
+                                    data-action="click->anime-card#showLibraryEditor"><i class="fa fa-star"></i>9.8
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="Title">{{this.title}}</h2> <span class="Year">Lượt xem: 4,424,021</span>
+                    </a>
+                </article>
+            </li>
+            {{/each}}
+        </ul>
+        <a href="/the-loai/anime-le" class="viewall">Xem thêm.. <i class="ion-ios-arrow-right"></i></a>
+    </section>
+    <section class="Wdgt" id="showTopPhim">
+        <div class="Title" style="font-size: 15px; font-weight: 400;color: #f44336;">NHỮNG ĐIỀU THÚ VỊ CÓ THỂ BẠN CHƯA
+            BIẾT<div class="Top">
+            </div>
+        </div>
+        <ul class="MovieList" style="display: block;">
+            {{#each news}}
+            <li>
+                <div class="TPost A"> <a rel="bookmark" href="/blog/{{this.slug}}/"> <span
+                            class="Top">#{{this.id}}<i></i></span>
+                        <div class="Image">
+                            <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="55" height="85"
+                                    src="{{this.image}}" class="attachment-img-mov-sm size-img-mov-sm wp-post-image"
+                                    alt={{this.title}}></figure>
+                        </div>
+                        <div class="Title">{{this.title}}</div>
+                        <p style="max-height: 45px;overflow: hidden; white-space: nowrap;text-overflow: ellipsis;">
+                            {{this.description}}</p>
+                    </a>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+</main>
+<script>
+    const owl_page = document.querySelectorAll('.clickable .owl-pagination .owl-page');
+    const TPostMv = document.querySelectorAll('.TPostMv');
+    const owl_item = document.querySelectorAll('.owl-item');
+
+    let index = 2;
+    let x = 0;
+    document.querySelector('.movieslist').style.display = 'block';
+
+    function removeaction() {
+        let itemaction = document.querySelector('.actives')
+        itemaction.classList.remove('actives')
+    }
+    owl_page.forEach(function (item, dex) {
+        item.addEventListener('click', function () {
+            removeaction()
+            item.classList.add('actives');
+            index = dex;
+            document.querySelector('.autoHeight .owl-wrapper').style.transform = 'translate3d(' + (dex - 2) * (-836) + 'px, 0px, 0px)';
+        })
+    })
+
+    function imauto() {
+        index = index + 1
+        if (index > owl_page.length - 1) {
+            index = 2
+        }
+        removeaction()
+        document.querySelector('.autoHeight .owl-wrapper').style.transform = 'translate3d(' + (index - 2) * (-836) + 'px, 0px, 0px)';
+        owl_page[index].classList.add('actives')
+    }
+    setInterval(imauto, 5000)
+</script>

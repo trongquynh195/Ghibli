@@ -1,0 +1,81 @@
+<div class="announcement">
+    <span class="ann_title">
+        <i class="fa fa-bullhorn"></i>
+    </span>
+    <span class="ann_text" style="color: black;">
+        Ghibli - Xem phim online hay nhất. Phim mới FullHD, tốc độ nhanh, cập nhật liên tục các bộ phim hot, phim chiếu
+        rạp, phim Thuyết minh Vietsub miễn phí.
+    </span>
+</div>
+<div class="MovieListTopCn">
+    <div class="MovieListTop owl-carousel owl-theme" style="opacity: 1; display: block;">
+        <div class="owl-wrapper-outer">
+            <div class="owl-wrapper"
+                style="width: 4512px; left: 0px; display: block; transition: all 300ms ease 0s; transform: translate3d(0px, 0px, 0px);">
+                {{#each list}}
+                <div class="owl-item" style="width: 146px;">
+                    <div class="TPostMv">
+                        <div class="TPost B">
+                            <a href="phim/{{this.slug}}" title={{this.title}}>
+                                <div class="Image">
+                                    <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="180" height="260"
+                                            src={{this.poster}}
+                                            class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                                            alt={{this.title}}></figure>
+                                    <span class="mli-eps">TẬP <i>
+                                            {{#with this.InfoList.Episodes as |episodes|}}
+                                            {{#each episodes as |episode|}}
+                                            {{#if @last}}
+                                            {{episode.tap}}
+                                            {{/if}}
+                                            {{/each}}
+                                            {{/with}}
+                                        </i></span>
+                                    <div class="anime-extras">
+                                        <div class="anime-avg-user-rating"
+                                            title="9.4 trong số 10 dựa trên 315 thành viên đánh giá"
+                                            data-action="click->anime-card#showLibraryEditor"><i
+                                                class="fa fa-star"></i>9.4</div>
+                                    </div>
+                                </div>
+                                <div class="Title">{{this.title}}</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="owl-controls clickable">
+            <div class="owl-pagination">
+                <div class="owl-page active"><span class=""></span></div>
+                <div class="owl-page"><span class=""></span></div>
+            </div>
+            <div class="owl-buttons">
+                <div class="owl-prev"><i class="fa fa-angle-left"></i></div>
+                <div class="owl-next"><i class="fa fa-angle-right"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const owl_prev = document.querySelector('.owl-prev');
+    const owl_next = document.querySelector('.owl-next');
+    owl_next.addEventListener('click', function () {
+        if (x > 8) {
+            x = 0;
+        }
+        document.querySelector('.owl-wrapper').style.transform = 'translate3d(' + (x) * (-146) + 'px, 0px, 0px)';
+        x = x + 1;
+    });
+
+    owl_prev.addEventListener('click', function () {
+        if (x < 1) {
+            x = 8;
+            document.querySelector('.owl-wrapper').style.transform = 'translate3d(' + (x) * (-146) + 'px, 0px, 0px)';
+        } else {
+            document.querySelector('.owl-wrapper').style.transform = 'translate3d(' + (x - 1) * (-146) + 'px, 0px, 0px)';
+            x = x - 1;
+        }
+    });
+</script>

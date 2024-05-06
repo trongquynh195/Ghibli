@@ -1,0 +1,253 @@
+<main>
+    <article class="TPost Single">
+        <div class="social-button">
+            <div class="item_social">
+                <div class="fb-like fb_iframe_widget" data-href="https://ghibli.id.vn/phim/{{movie.slug}}"
+                    data-layout="button_count" data-action="like" data-size="small" data-show-faces="true"
+                    data-share="true" fb-xfbml-state="rendered"
+                    fb-iframe-plugin-query="action=like&amp;app_id=1214104412028762&amp;container_width=0&amp;href=http%3A%2F%2Fanimevietsub.tv%2Fphim%2F-5232%2F&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=small">
+                    <span style="vertical-align: bottom; width: 150px; height: 28px;"><iframe name="f3e32a3d9653dadc2"
+                            width="1000px" height="1000px" data-testid="fb:like Facebook Social Plugin"
+                            title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true"
+                            allowfullscreen="true" scrolling="no" allow="encrypted-media"
+                            src="https://www.facebook.com/v17.0/plugins/like.php?action=like&amp;app_id=1214104412028762&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df384bebebfb5adc0a%26domain%3Danimevietsub.io%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fanimevietsub.io%252Ff34916ad97a45ca97%26relation%3Dparent.parent&amp;container_width=0&amp;href=http%3A%2F%2Fanimevietsub.tv%2Fphim%2F-5232%2F&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=small"
+                            style="border: none; visibility: visible; width: 150px; height: 28px;"
+                            class=""></iframe></span>
+                </div>
+            </div>
+            <div class="item_social">
+                <div class="fb-save fb_iframe_widget" data-uri="https://ghibli.id.vn/phim/{{movie.slug}}"
+                    data-size="small" fb-xfbml-state="rendered"
+                    fb-iframe-plugin-query="app_id=1214104412028762&amp;container_width=0&amp;locale=vi_VN&amp;sdk=joey&amp;size=small&amp;uri=http%3A%2F%2Fanimevietsub.tv%2Fphim%2F-5232%2F">
+                    <span style="vertical-align: bottom; width: 136px; height: 20px;"><iframe name="f4f9358a3a65e5ed0"
+                            width="1000px" height="1000px" data-testid="fb:save Facebook Social Plugin"
+                            title="fb:save Facebook Social Plugin" frameborder="0" allowtransparency="true"
+                            allowfullscreen="true" scrolling="no" allow="encrypted-media"
+                            src="https://www.facebook.com/v17.0/plugins/save.php?app_id=1214104412028762&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Dfc2e946ce1a5b5819%26domain%3Danimevietsub.io%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fanimevietsub.io%252Ff34916ad97a45ca97%26relation%3Dparent.parent&amp;container_width=0&amp;locale=vi_VN&amp;sdk=joey&amp;size=small&amp;uri=http%3A%2F%2Fanimevietsub.tv%2Fphim%2F-5232%2F"
+                            style="border: none; visibility: visible; width: 136px; height: 20px;"
+                            class=""></iframe></span>
+                </div>
+            </div>
+        </div>
+        <header>
+            <h1 class="Title" style="color: rgb(24, 119, 242);">{{movie.title}}</h1>
+            <h2 class="SubTitle">{{movie.subtitle}}</h2>
+            <div class="Image">
+                <div class="tools-box">
+                    <div class="tools-box-bookmark normal" data-filmid="5232" style="display: block;"
+                        data-added="false"><span class="bookmark-status"></span><span class="bookmark-action"></span>
+                    </div>
+                </div>
+                <figure class="Objf"><img width="180" height="260" src={{movie.poster}}
+                        class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                        alt="{{movie.title}} - {{movie.subtitle}}"></figure>
+                <a href="/phim/{{movie.slug}}/tap"><i class="TpMvPlay AAIco-play_arrow show"></i></a>
+                <a class="watch_button_more" title="{{movie.title}} - {{movie.subtitle}}"
+                    href="/phim/{{movie.slug}}/tap">Xem phim
+                </a>
+            </div>
+            <div class="Description">{{movie.description}}</div>
+        </header>
+        <footer class="ClFx">
+            <div class="VotesCn">
+                <div class="Prct">
+                    <div id="TPVotes" data-percent="98" class="percircle animate gt50"><span>98</span>
+                        <div class="slice">
+                            <div class="bar" style="transform: rotate(350.2deg);"></div>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-ratings">
+                    <input id="hint_current" type="hidden" value="">
+                    <input id="score_current" type="hidden" value="9.8">
+                    <div id="star" data-score="9.8" style="cursor: pointer; width: 170px;">
+                        <img src="/img/star-on.svg" alt="1" title="Dở tệ" onclick="setRating(1)">&nbsp;
+                        <img src="/img/star-on.svg" alt="2" title="Dở" onclick="setRating(2)">&nbsp;
+                        <img src="/img/star-on.svg" alt="3" title="Không hay" onclick="setRating(3)">&nbsp;
+                        <img src="/img/star-on.svg" alt="4" title="Không hay lắm" onclick="setRating(4)">&nbsp;
+                        <img src="/img/star-on.svg" alt="5" title="Bình thường" onclick="setRating(5)">&nbsp;
+                        <img src="/img/star-on.svg" alt="6" title="Xem được" onclick="setRating(6)">&nbsp;
+                        <img src="/img/star-on.svg" alt="7" title="Có vẻ hay" onclick="setRating(7)">&nbsp;
+                        <img src="/img/star-on.svg" alt="8" title="Hay" onclick="setRating(8)">&nbsp;
+                        <img src="/img/star-on.svg" alt="9" title="Rất hay" onclick="setRating(9)">&nbsp;
+                        <img src="/img/star-on.svg" alt="10" title="Tuyệt hay" onclick="setRating(10)">
+                        <input type="hidden" name="score" value="7.7">
+                    </div>
+                    (Đánh giá <strong id="average_score">9.8</strong>/10 từ <strong class="num-rating">320</strong>
+                    thành
+                    viên)<br><span class="post-ratings-text" id="hint" style="font-size: 12px;"></span>
+                </div>
+                <div id="post-ratings-984-loading" class="post-ratings-loading"> <img src="./statics/images/loading.gif"
+                        class="post-ratings-image">Đang tải...</div>
+            </div>
+            <p class="Info"> <span class="Time AAIco-access_time"><i
+                        class="fa fa-clock"></i>{{InfoList.Duration}}</span> <span class="Date AAIco-date_range"><a
+                        href="/danh-sach/all/all/all/2024" title="List phim năm 2024 Vietsub">
+                        <i class="fa-solid fa-calendar-days"></i>2024</a></span> <span
+                    class="View AAIco-remove_red_eye"><i class="fa-solid fa-eye"></i>180,213 Lượt Xem</span></p>
+        </footer>
+        <br style="clear:both">
+        <div class="MovieInfo TPost SeasonList">
+            <div class="season_item">
+                {{#each season}}
+                <a href="/phim/{{this.slug}}/" title="Phim {{this.name_season}}">{{this.name_season}}</a>
+                {{/each}}
+            </div>
+            <div class="TPostBg Objf"><img class="TPostBg" src={{movie.banner}} alt="Background">
+            </div>
+    </article>
+    <div class="MovieInfo TPost Single">
+        <div class="MovieTabNav">
+            <div class="Lnk AAIco-description on" data-mvtab="MvTb-Info"> <i class="fa-solid fa-file-invoice"
+                    style="margin-right: 0.5rem;"></i>Thông
+                tin phim</div>
+            <div class="Lnk AAIco-video_call" data-mvtab="MvTb-Trailer"><i class="fa-solid fa-video"
+                    style="margin-right: 0.5rem;"></i>Trailer
+            </div>
+        </div>
+        <div class="MvTbCn anmt on" id="MvTb-Info">
+            <div class="mvici-left">
+                <ul class="InfoList">
+                    <li class="AAIco-adjust latest_eps"><strong><i class="fa-solid fa-record-vinyl"></i>Tập
+                            mới:</strong>
+                        {{#each new_tap}}
+                        <a href="/phim/{{../movie.slug}}/tap-{{this.tap}}"
+                            title="Xem phim {{../movie.title}} Tập {{this.tap}}">{{this.tap}}</a>
+                        {{/each}}
+                    </li>
+                    <li class="AAIco-adjust"><strong><i class="fa-solid fa-record-vinyl"></i>Lịch chiếu:</strong>
+                        {{InfoList.Release_Schedule}}</li>
+                    <li class="AAIco-adjust"><strong><i class="fa-solid fa-record-vinyl"></i>Trạng thái:</strong>
+                        {{InfoList.Status}}</li>
+                    <li class="AAIco-adjust"><strong><i class="fa-solid fa-record-vinyl"></i>Thể loại:</strong>
+                        {{#each theloai}}
+                        <a href="http://localhost:3000/the-loai/{{slugify this}}" title="Anime bộ">{{this}}</a>,
+                        {{/each}}
+                    </li>
+                    <li class="AAIco-adjust"><strong><i class="fa-solid fa-record-vinyl"></i>Đạo diễn:</strong>
+                        {{InfoList.Director}}</li>
+                    <li class="AAIco-adjust"><strong><i class="fa-solid fa-record-vinyl"></i>Quốc gia:</strong> <a
+                            href="https://animevietsub.io/quoc-gia/jp/"
+                            title="{{InfoList.Country}}">{{InfoList.Country}}</a>, </li>
+                    <li class="AAIco-adjust"><strong><i class="fa-solid fa-record-vinyl"></i>Số người theo dõi:</strong>
+                        {{InfoList.Number_of_Followers}}</li>
+                </ul>
+            </div>
+            <div class="mvici-right">
+                <ul class="InfoList">
+                    <li class="AAIco-adjust"><strong><i class="fa-solid fa-record-vinyl"></i>Thời lượng:</strong>
+                        {{InfoList.Duration}}</li>
+                    <li class="AAIco-adjust"><strong><i class="fa-solid fa-record-vinyl"></i>Chất lượng:</strong> <span
+                            class="Qlty">
+                            {{InfoList.Quality}}</span>
+                    </li>
+                    <li class="AAIco-adjust"><strong><i class="fa-solid fa-record-vinyl"></i>Rating:</strong> <span
+                            class="imdb"> {{InfoList.Rating}}</span>
+                    </li>
+                    <li class="AAIco-adjust"><strong><i class="fa-solid fa-record-vinyl"></i>Ngôn ngữ:</strong>
+                        {{InfoList.Language}}</li>
+                    <li class="AAIco-adjust"><strong><i class="fa-solid fa-record-vinyl"></i>Studio:</strong> <a
+                            href="https://animevietsub.io/studio/Children%26%2339s+Playground+Entertainment.html"
+                            title="Children's Playground Entertainment"> {{InfoList.Studio}}</a></li>
+                    <li class="AAIco-adjust"><strong><i class="fa-solid fa-record-vinyl"></i>Season: </strong><a
+                            href="/season/winter/2024/"
+                            title="List anime {{InfoList.Season.[0]}} - {{InfoList.Season.[1]}} Vietsub">
+                            {{InfoList.Season.[0]}} - {{InfoList.Season.[1]}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="MvTbCn anmt" id="MvTb-Trailer">
+            <div class="TPlayerCn BgA">
+                <div class="EcBgA">
+                    <div class="TPlayer">
+                        <div class="TPlayerTb Current" id="Opt1">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/{{InfoList.Trailer}}?si=U51R5MGVhnPTNxSl"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <span class="AAIco-lightbulb_outline lgtbx-lnk"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="TPostBg Objf"></div>
+    </div>
+    <div class="fb-comments" data-href="https://ghibli.id.vn/phim/{{movie.slug}}" data-width="100%" data-numposts="10">
+    </div>
+</main>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v19.0"
+    nonce="hfSiW2ZL"></script>
+<script>
+    document.querySelector('.MovieTabNav').addEventListener('click', function (event) {
+        console.log(event.target.classList.contains('Lnk'));
+        if (event.target.classList.contains('Lnk')) {
+            var clickedTabValue = event.target.getAttribute('data-mvtab');
+
+            // Lấy tất cả các tab có class 'Lnk' và loại bỏ lớp 'on'
+            var allTabs = document.querySelectorAll('.Lnk');
+
+            allTabs.forEach(function (tab) {
+                tab.classList.remove('on');
+            });
+            console.log(allTabs);
+            // Thêm lớp 'on' cho tab được nhấp vào
+            event.target.classList.add('on');
+
+            // Ẩn tất cả các nội dung tab
+            var allTabContents = document.querySelectorAll('.MvTbCn');
+            allTabContents.forEach(function (tabContent) {
+                tabContent.classList.remove('on');
+            });
+
+            // Hiển thị nội dung của tab được nhấp vào
+            var clickedTabContent = document.getElementById(clickedTabValue);
+            clickedTabContent.classList.add('on');
+        }
+    });
+    let slugphim = document.querySelector('.Image .watch_button_more');
+    let hrefphim = slugphim.getAttribute('href');
+    let partsphim = hrefphim.split('/').filter(function (part) {
+        return part !== '';
+    });
+    let lastphim = partsphim[partsphim.length - 2];
+    console.log(lastphim);
+    var anchorElements = document.querySelectorAll('.season_item a');
+    anchorElements.forEach(function (anchorElement) {
+        var hrefValue = anchorElement.getAttribute('href');
+        var parts = hrefValue.split('/').filter(function (part) {
+            return part !== '';
+        });
+        var lastPart = parts[parts.length - 1];
+        if (lastPart === lastphim) {
+            anchorElement.classList.add('active');
+        }
+    });
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v19.0&appId=330287969665869" nonce="2BJUBbqa">
+    </script>
+
+<script>
+    function setRating(score) {
+        var stars = document.getElementById('star').getElementsByTagName('img');
+        var ratingInput = document.getElementById('rating');
+
+        // Reset all stars to default
+        for (var i = 0; i < stars.length; i++) {
+            stars[i].src = "/img/star.svg";
+        }
+
+        // Set selected stars
+        for (var i = 0; i < score; i++) {
+            stars[i].src = "/img/star-on.svg";
+        }
+
+        // Update rating input value
+        ratingInput.value = score;
+    }
+</script>

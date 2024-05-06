@@ -1,0 +1,57 @@
+<div class="login_main">
+    <div class="containers">
+        <button class="AuthModal_close__LqoEU">
+            <span>×</span>
+        </button>
+        <form method="POST" action="/store">
+            <div class="form signup">
+                <h2>Sign Up</h2>
+                <div class="inputBox">
+                    <input type="text" required="required" name="name" />
+                    <i class="fa-regular fa-user"></i>
+                    <span>Tên tài khoản</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" required="required" name="email" />
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Địa chỉ Email</span>
+                </div>
+                <div class="inputBox">
+                    <input type="password" required="required" name="password" />
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Tạo mật khẩu</span>
+                </div>
+                <div class="inputBox">
+                    <input type="password" required="required" />
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Xác nhận mật khẩu</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Tạo tài khoản" />
+                </div>
+                <p>Bạn đã đăng ký chưa ? <a href="#" class="login">Đăng nhập</a></p>
+            </div>
+        </form>
+
+        <form method="POST" action="/" class="div-signin">
+            <div class="form signin">
+                <h2 class="h2-signin">Log in</h2>
+                <div class="inputBox">
+                    <input type="text" required="required" name="email" />
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Địa chỉ Email</span>
+                </div>
+                <div class="inputBox">
+                    <input type="password" required="required" />
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Mật khẩu</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Đăng nhập" />
+                </div>
+                <p class="quen"><a href="#">Quên mật khẩu</a></p>
+                <p class="create-signin">Bạn chưa có tài khoản ? <a href="#" class="create">Tạo một tài khoản</a></p>
+            </div>
+        </form>
+    </div>
+</div>

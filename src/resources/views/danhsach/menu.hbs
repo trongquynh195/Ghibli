@@ -1,0 +1,48 @@
+<section id="single-home">
+    <div class="Top">
+        <h1><a href="/anime/create" style="color:white;">Thêm phim</a></h1>
+    </div>
+
+    <div class="Top">
+        <h1>Danh sách Anime <i class="fa fa-angle-right"></i></h1>
+        <a href="" class="STPb Current" data-tag="all" title="">Tất cả</a>
+        <a href="" class="STPb" data-tag="winter2024" title="">Phim</a>
+        <a href="" class="STPb " data-tag="animeSeries" title="">Phim</a>
+        <a href="" class="STPb " data-tag="animeSingle" title="">Phim</a>
+    </div>
+    <div class="currentPage">
+        {{pagination currentPage totalPages}}
+    </div>
+
+    <ul class="MovieList Rows AX A06 B04 C03 E20">
+        {{#each animeData}}
+        <li class="TpostMv">
+            <article id=""
+                class="TPost C post-5054 post type-post status-publish format-standard has-post-thumbnail hentry">
+                <a href="/anime/{{this.slug}}/update">
+                    <div class="Image">
+                        <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="215" height="320" src={{this.poster}}
+                                class="attachment-thumbnail size-thumbnail wp-post-image" alt="{{this.title}}"
+                                title="Shangri-La Frontier (2023)"></figure>
+                        <div class="anime-extras">
+                            <div class="anime-avg-user-rating" title="9.8 trong số 10 dựa trên 683 thành viên đánh giá"
+                                data-action="click->anime-card#showLibraryEditor"><i class="fa fa-star"></i>9.8
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="Title">{{this.title}}</h2>
+                    <span class="Year">TẬP<i>
+                            {{#with this.InfoList.Episodes as |episodes|}}
+                            {{#each episodes as |episode|}}
+                            {{#if @last}}
+                            {{episode.tap}}
+                            {{/if}}
+                            {{/each}}
+                            {{/with}}</i>
+                    </span>
+                </a>
+            </article>
+        </li>
+        {{/each}}
+    </ul>
+</section>

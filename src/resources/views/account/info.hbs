@@ -1,0 +1,79 @@
+{{#if user}}
+<section id="log-reg">
+    <div class="row">
+        <div class="col-3" style="margin-bottom:20px;">
+            <div class="profile-sidebar">
+                <div class="profile-userpic">
+                    <img src="https://cdn.animevietsub.fun/data/avatar/user-186785.jpg?v=1713962557"
+                        class="img-responsive" alt="">
+                </div>
+                <div class="profile-usertitle">
+                    <div class="profile-usertitle-name">{{user.username}}</div>
+                    <div class="profile-usertitle-vip">
+                        <p>Tham gia: {{time user.createdAt}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-9" style="margin-bottom:20px;">
+            <div class="col-xs-12 col-md-12 pdr0">
+                <div class="tab-login update-info" id="tab-login">
+                    <div class="title"> THÔNG TIN TÀI KHOẢN</div>
+                    <div class="bor-form">
+                        <form name="SignInForm" id="SignInForm" method="POST" class="form-login form-horizontal"
+                            action="/account/update/">
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">Email</label>
+                                <div class="col-sm-9">
+                                    <input name="email" type="email" id="email" value={{user.email}}
+                                        class="form-control lg-email" placeholder="Email đăng nhập" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="username">Tài khoản</label>
+                                <div class="col-sm-9">
+                                    <input name="username" type="text" id="username" value={{user.username}}
+                                        class="form-control lg-name" placeholder="Tài khoản / Username" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="hoten">Họ tên</label>
+                                <div class="col-sm-9">
+                                    <input name="hoten" type="text" id="hoten" value={{user.hoten}}
+                                        class="form-control lg-name" placeholder="Họ và tên">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="gender">Giới tính</label>
+                                <div class="col-sm-9 gender">
+                                    <input id="male" name="gender" type="radio" value="1" checked="checked">
+                                    <label for="male" class="label-radio">Nam</label>
+                                    <input id="female" name="gender" type="radio" value="0">
+                                    <label for="female" class="label-radio">Nữ</label>
+                                    <input id="pede" name="gender" type="radio" value="2">
+                                    <label for="pede" class="label-radio">Không xác định</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">Mật khẩu</label>
+                                <div class="col-sm-9">
+                                    <input name="password" type="password" id="password" value=""
+                                        class="form-control lg-pass" placeholder="Để trống nếu không muốn đổi">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="email">Avatar</label>
+                                <div class="col-sm-9">
+                                    <input type="file" name="fileToUpload" id="fileToUpload">
+                                    (Ảnh nhỏ hơn 5MB, nếu ảnh lớn hơn 5MB sẽ được chọn mặc định)
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="border-radius: 3px;">Cập nhật</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{/if}}

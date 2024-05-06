@@ -1,0 +1,46 @@
+{
+  "name": "ghibli-new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ghibli.js",
+  "scripts": {
+    "start": "nodemon --inspect src/ghibli.js",
+    "server": "json-server --watch src/public/Api/movies.json",
+    "watch": "node-sass --watch src/resources/scss/app.scss src/public/Css/app.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trongquynh195/Ghibli.git"
+  },
+  "keywords": [
+    "Ghibli",
+    "anime",
+    "manga",
+    "..."
+  ],
+  "author": "Khúc Trọng Quynh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trongquynh195/Ghibli/issues"
+  },
+  "homepage": "https://github.com/trongquynh195/Ghibli#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.18.0",
+    "handlebars": "^4.7.8",
+    "method": "^2.0.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.3.3",
+    "mongoose-slug-generator": "^1.0.4",
+    "override": "^0.0.1"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.1.0"
+  }
+}

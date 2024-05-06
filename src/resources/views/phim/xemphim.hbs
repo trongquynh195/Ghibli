@@ -1,0 +1,460 @@
+<main>
+
+    <div class="MvTbCn anmt on" id="MvTb-Trailer" style="padding: 0;border-radius: 3px;">
+        <div class="TPlayerCn BgA">
+            <div class="EcBgA">
+                <div class="TPlayer" style="padding-top: 30%;">
+                    <div class="TPlayerTb Current" id="Opt1">
+                        <iframe style="border-radius: 3px;" width="640" height="360"
+                            src="https://short.ink/{{slugtap.slug}}" frameborder="0" scrolling="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <span class="AAIco-lightbulb_outline lgtbx-lnk"></span>
+                </div>
+                <div class="Wdgt list-server" id="list-server">
+                    <div class="schedule-title-main">
+                        <h4><i class="fa fa-calendar" aria-hidden="true"></i> Phim đang chiếu - <strong>Tập
+                                {{#with movie.InfoList.Episodes as |episodes|}}
+                                {{#each episodes as |episode|}}
+                                {{#if @last}}
+                                {{episode.tap}}
+                                {{/if}}
+                                {{/each}}
+                                {{/with}}
+                            </strong>.Tập tiếp theo sẽ được chiếu khoảng <strong>{{movie.InfoList.Release_Schedule}}
+                            </strong>tuần tới</h4>
+                    </div>
+                    <div class="server clearfix server-group">
+                        <h3 class="server-name">Ghibli :> </h3>
+                        <ul class="list-episode tab-pane">
+                            {{#each tap}}
+                            <li class="episode "><a data-id="95972" title="Tập {{this.tap}}"
+                                    class="btn-episode episode-link btn3d"
+                                    href="/phim/{{../movie.slug}}/tap-{{this.tap}}" data-play="api" data-movie=""
+                                    data-source="" data-hash="">{{this.tap}}</a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <article class="TPost Single">
+        <div class="social-button">
+            <div class="item_social">
+                <div class="fb-like fb_iframe_widget" data-href="https://ghibli.id.vn/phim/{{movie.slug}}"
+                    data-layout="button_count" data-action="like" data-size="small" data-show-faces="true"
+                    data-share="true" fb-xfbml-state="rendered"
+                    fb-iframe-plugin-query="action=like&amp;app_id=1214104412028762&amp;container_width=0&amp;href=http%3A%2F%2Fanimevietsub.tv%2Fphim%2F-5232%2F&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=small">
+                    <span style="vertical-align: bottom; width: 150px; height: 28px;"><iframe name="f3e32a3d9653dadc2"
+                            width="1000px" height="1000px" data-testid="fb:like Facebook Social Plugin"
+                            title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true"
+                            allowfullscreen="true" scrolling="no" allow="encrypted-media"
+                            src="https://www.facebook.com/v17.0/plugins/like.php?action=like&amp;app_id=1214104412028762&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df384bebebfb5adc0a%26domain%3Danimevietsub.io%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fanimevietsub.io%252Ff34916ad97a45ca97%26relation%3Dparent.parent&amp;container_width=0&amp;href=http%3A%2F%2Fanimevietsub.tv%2Fphim%2F-5232%2F&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=small"
+                            style="border: none; visibility: visible; width: 150px; height: 28px;"
+                            class=""></iframe></span>
+                </div>
+            </div>
+            <div class="item_social">
+                <div class="fb-save fb_iframe_widget" data-uri="https://ghibli.id.vn/phim/{{movie.slug}}"
+                    data-size="small" fb-xfbml-state="rendered"
+                    fb-iframe-plugin-query="app_id=1214104412028762&amp;container_width=0&amp;locale=vi_VN&amp;sdk=joey&amp;size=small&amp;uri=http%3A%2F%2Fanimevietsub.tv%2Fphim%2F-5232%2F">
+                    <span style="vertical-align: bottom; width: 136px; height: 20px;"><iframe name="f4f9358a3a65e5ed0"
+                            width="1000px" height="1000px" data-testid="fb:save Facebook Social Plugin"
+                            title="fb:save Facebook Social Plugin" frameborder="0" allowtransparency="true"
+                            allowfullscreen="true" scrolling="no" allow="encrypted-media"
+                            src="https://www.facebook.com/v17.0/plugins/save.php?app_id=1214104412028762&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Dfc2e946ce1a5b5819%26domain%3Danimevietsub.io%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fanimevietsub.io%252Ff34916ad97a45ca97%26relation%3Dparent.parent&amp;container_width=0&amp;locale=vi_VN&amp;sdk=joey&amp;size=small&amp;uri=http%3A%2F%2Fanimevietsub.tv%2Fphim%2F-5232%2F"
+                            style="border: none; visibility: visible; width: 136px; height: 20px;"
+                            class=""></iframe></span>
+                </div>
+            </div>
+        </div>
+        <header>
+            <h1 class="Title">{{movie.title}}</h1>
+            <h2 class="SubTitle">{{movie.subtitle}}</h2>
+            <div class="Image">
+                <div class="tools-box">
+                    <div class="tools-box-bookmark normal" data-filmid="5232" style="display: block;"
+                        data-added="false"><span class="bookmark-status"></span><span class="bookmark-action"></span>
+                    </div>
+                </div>
+                <figure class="Objf"><img width="180" height="260" src={{movie.poster}}
+                        class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                        alt="{{movie.title}} - {{movie.subtitle}}"></figure>
+                <a href="/phim/{{movie.slug}}/xem-phim.html"><i class="TpMvPlay AAIco-play_arrow show"></i></a>
+                <a class="watch_button_more" title="{{movie.title}} - {{movie.subtitle}}"
+                    href="/phim/{{movie.slug}}/xem-phim.html">Xem phim
+                </a>
+            </div>
+            <div class="Description">{{movie.description}}</div>
+        </header>
+        <footer class="ClFx">
+            <div class="VotesCn">
+                <div class="Prct">
+                    <div id="TPVotes" data-percent="99" class="percircle animate gt50"><span>99</span>
+                        <div class="slice">
+                            <div class="bar" style="transform: rotate(355.2deg);"></div>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-ratings">
+                    <input id="hint_current" type="hidden" value="">
+                    <input id="score_current" type="hidden" value="9.9">
+                    <div id="star" data-score="9.9" style="cursor: pointer; width: 170px;"><img src="/img/star-on.svg"
+                            alt="1" title="Dở tệ">&nbsp;<img src="/img/star-on.svg" alt="2" title="Dở">&nbsp;<img
+                            src="/img/star-on.svg" alt="3" title="Không hay">&nbsp;<img src="/img/star-on.svg" alt="4"
+                            title="Không hay lắm">&nbsp;<img src="/img/star-on.svg" alt="5"
+                            title="Bình thường">&nbsp;<img src="/img/star-on.svg" alt="6" title="Xem được">&nbsp;<img
+                            src="/img/star-on.svg" alt="7" title="Có vẻ hay">&nbsp;<img src="/img/star-on.svg" alt="8"
+                            title="Hay">&nbsp;<img src="/img/star-on.svg" alt="9" title="Rất hay">&nbsp;<img
+                            src="/img/star-on.svg" alt="10" title="Tuyệt hay"><input type="hidden" name="score"
+                            value="7.7"></div>
+                    (Đánh giá <strong id="average_score">9.9</strong>/99 từ <strong class="num-rating">100</strong>
+                    thành
+                    viên)<br><span class="post-ratings-text" id="hint" style="font-size: 12px;"></span>
+                </div>
+                <div id="post-ratings-984-loading" class="post-ratings-loading"> <img src="./statics/images/loading.gif"
+                        class="post-ratings-image">Đang tải...</div>
+            </div>
+            <p class="Info"> <span class="Time AAIco-access_time">{{InfoList.Duration}}</span> <span
+                    class="Date AAIco-date_range"><a href="/danh-sach/all/all/all/2024"
+                        title="List phim năm 2024 Vietsub">2024</a></span> <span
+                    class="View AAIco-remove_red_eye">80,213 Lượt Xem</span></p>
+        </footer>
+        <br style="clear:both">
+        <div class="TPostBg Objf"><img class="TPostBg" src={{movie.banner}} alt="Background">
+        </div>
+    </article>
+    <div class="fb-comments" data-href="https://ghibli.id.vn/phim/{{movie.slug}}" data-width="100%" data-numposts="10">
+    </div>
+    <div class="Wdgt">
+        <div class="Title">Phim liên quan</div>
+        <div class="MovieListRelated owl-carousel owl-theme" style="opacity: 1; display: block;">
+            <div class="owl-wrapper-outer">
+                <div class="owl-wrapper" style="width: 3072px; left: 0px; display: block;">
+                    <div class="owl-item" style="width: 128px;">
+                        <div class="TPostMv">
+                            <div class="TPost B">
+                                <a href="https://animevietsub.io/phim/one-piece-movie-1-i3-a6/"
+                                    title="One Piece Movie 1 (2000)">
+                                    <div class="Image">
+                                        <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="180" height="260"
+                                                src="https://cdn.animevietsub.io/data/poster/2017/08/05/animevsub-poster-7780.jpg"
+                                                class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                                                alt="One Piece Movie 1 (2000)"></figure>
+                                        <span class="mli-quality">HD</span>
+                                        <div class="anime-extras">
+                                            <div class="anime-avg-user-rating"
+                                                title="7.7 trong số 10 dựa trên 40 thành viên đánh giá"
+                                                data-action="click->anime-card#showLibraryEditor"><i
+                                                    class="fa fa-star"></i>7.7</div>
+                                        </div>
+                                    </div>
+                                    <div class="Title">One Piece Movie 1</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 128px;">
+                        <div class="TPostMv">
+                            <div class="TPost B">
+                                <a href="https://animevietsub.io/phim/one-piece-movie-2-nejimaki-jima-no-daibouken-i3-a7/"
+                                    title="One Piece Movie 2: Nejimaki-jima no Daibouken (2001)">
+                                    <div class="Image">
+                                        <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="180" height="260"
+                                                src="https://cdn.animevietsub.io/data/poster/2017/08/08/animevsub-poster-2897.jpg"
+                                                class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                                                alt="One Piece Movie 2: Nejimaki-jima no Daibouken (2001)"></figure>
+                                        <span class="mli-quality">HD</span>
+                                        <div class="anime-extras">
+                                            <div class="anime-avg-user-rating"
+                                                title="7.7 trong số 10 dựa trên 25 thành viên đánh giá"
+                                                data-action="click->anime-card#showLibraryEditor"><i
+                                                    class="fa fa-star"></i>7.7</div>
+                                        </div>
+                                    </div>
+                                    <div class="Title">One Piece Movie 2: Nejimaki-jima no Daibouken</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 128px;">
+                        <div class="TPostMv">
+                            <div class="TPost B">
+                                <a href="https://animevietsub.io/phim/one-piece-movie-3-chinjuu-jima-no-chopper-oukoku-i2-a8/"
+                                    title="One Piece Movie 3: Chinjuu-jima no Chopper Oukoku (2002)">
+                                    <div class="Image">
+                                        <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="180" height="260"
+                                                src="https://cdn.animevietsub.io/data/poster/2017/08/08/animevsub-poster-2420.jpg"
+                                                class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                                                alt="One Piece Movie 3: Chinjuu-jima no Chopper Oukoku (2002)"></figure>
+                                        <span class="mli-quality">HD</span>
+                                        <div class="anime-extras">
+                                            <div class="anime-avg-user-rating"
+                                                title="6.4 trong số 10 dựa trên 21 thành viên đánh giá"
+                                                data-action="click->anime-card#showLibraryEditor"><i
+                                                    class="fa fa-star"></i>6.4</div>
+                                        </div>
+                                    </div>
+                                    <div class="Title">One Piece Movie 3: Chinjuu-jima no Chopper Oukoku</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 128px;">
+                        <div class="TPostMv">
+                            <div class="TPost B">
+                                <a href="https://animevietsub.io/phim/one-piece-episode-of-east-blue-luffy-to-4-nin-no-nakama-no-daibouken-a3603/"
+                                    title="One Piece: Episode of East Blue - Luffy to 4-nin no Nakama no Daibouken (2017)">
+                                    <div class="Image">
+                                        <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="180" height="260"
+                                                src="https://cdn.animevietsub.io/data/poster/2019/08/24/animevsub-qVyBxkFVkq.jpg"
+                                                class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                                                alt="One Piece: Episode of East Blue - Luffy to 4-nin no Nakama no Daibouken (2017)">
+                                        </figure>
+                                        <span class="mli-quality">HD</span>
+                                        <div class="anime-extras">
+                                            <div class="anime-avg-user-rating"
+                                                title="8.3 trong số 10 dựa trên 12 thành viên đánh giá"
+                                                data-action="click->anime-card#showLibraryEditor"><i
+                                                    class="fa fa-star"></i>8.3</div>
+                                        </div>
+                                    </div>
+                                    <div class="Title">One Piece: Episode of East Blue - Luffy to 4-nin no Nakama no
+                                        Daibouken</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 128px;">
+                        <div class="TPostMv">
+                            <div class="TPost B">
+                                <a href="https://animevietsub.io/phim/horimiya-piece-a4987/"
+                                    title="Horimiya: Piece (2023)">
+                                    <div class="Image">
+                                        <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="180" height="260"
+                                                src="https://cdn.animevietsub.io/data/poster/2023/05/14/animevsub-UOGGbCGZiE.jpg"
+                                                class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                                                alt="Horimiya: Piece (2023)"></figure>
+                                        <span class="mli-eps">HOÀN<i>TẤT</i></span>
+                                        <div class="anime-extras">
+                                            <div class="anime-avg-user-rating"
+                                                title="9.2 trong số 10 dựa trên 2103 thành viên đánh giá"
+                                                data-action="click->anime-card#showLibraryEditor"><i
+                                                    class="fa fa-star"></i>9.2</div>
+                                        </div>
+                                    </div>
+                                    <div class="Title">Horimiya: Piece</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 128px;">
+                        <div class="TPostMv">
+                            <div class="TPost B">
+                                <a href="https://animevietsub.io/phim/one-piece-live-action-a5044/"
+                                    title="One Piece Live Action (2023)">
+                                    <div class="Image">
+                                        <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="180" height="260"
+                                                src="https://cdn.animevietsub.io/data/poster/2023/08/08/animevsub-gMoeKR4NJv.jpg"
+                                                class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                                                alt="One Piece Live Action (2023)"></figure>
+                                        <span class="mli-eps">HOÀN<i>TẤT</i></span>
+                                        <div class="anime-extras">
+                                            <div class="anime-avg-user-rating"
+                                                title="7.9 trong số 10 dựa trên 261 thành viên đánh giá"
+                                                data-action="click->anime-card#showLibraryEditor"><i
+                                                    class="fa fa-star"></i>7.9</div>
+                                        </div>
+                                    </div>
+                                    <div class="Title">One Piece Live Action</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 128px;">
+                        <div class="TPostMv">
+                            <div class="TPost B">
+                                <a href="https://animevietsub.io/phim/one-piece-movie-4-dead-end-no-bouken-i3-a9/"
+                                    title="One Piece Movie 4: Dead End no Bouken (2003)">
+                                    <div class="Image">
+                                        <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="180" height="260"
+                                                src="https://cdn.animevietsub.io/data/poster/2017/08/08/animevsub-poster-5448.jpg"
+                                                class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                                                alt="One Piece Movie 4: Dead End no Bouken (2003)"></figure>
+                                        <span class="mli-quality">HD</span>
+                                        <div class="anime-extras">
+                                            <div class="anime-avg-user-rating"
+                                                title="7.7 trong số 10 dựa trên 21 thành viên đánh giá"
+                                                data-action="click->anime-card#showLibraryEditor"><i
+                                                    class="fa fa-star"></i>7.7</div>
+                                        </div>
+                                    </div>
+                                    <div class="Title">One Piece Movie 4: Dead End no Bouken</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 128px;">
+                        <div class="TPostMv">
+                            <div class="TPost B">
+                                <a href="https://animevietsub.io/phim/short-peace-a229/" title="Short Peace ()">
+                                    <div class="Image">
+                                        <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="180" height="260"
+                                                src="https://cdn.animevietsub.io/data/poster/2017/08/19/animevsub-53171.jpg"
+                                                class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                                                alt="Short Peace ()"></figure>
+                                        <span class="mli-eps">TẬP<i>5</i></span>
+                                        <div class="anime-extras">
+                                            <div class="anime-avg-user-rating"
+                                                title="10 trong số 10 dựa trên 5 thành viên đánh giá"
+                                                data-action="click->anime-card#showLibraryEditor"><i
+                                                    class="fa fa-star"></i>10</div>
+                                        </div>
+                                    </div>
+                                    <div class="Title">Short Peace</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 128px;">
+                        <div class="TPostMv">
+                            <div class="TPost B">
+                                <a href="https://animevietsub.io/phim/one-piece-movie-5-norowareta-seiken-i3-a2061/"
+                                    title="One Piece Movie 5: Norowareta Seiken (2004)">
+                                    <div class="Image">
+                                        <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="180" height="260"
+                                                src="https://cdn.animevietsub.io/data/poster/2017/09/17/animevsub-cRbdfAZ3fG.jpg"
+                                                class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                                                alt="One Piece Movie 5: Norowareta Seiken (2004)"></figure>
+                                        <span class="mli-quality">HD</span>
+                                        <div class="anime-extras">
+                                            <div class="anime-avg-user-rating"
+                                                title="8.9 trong số 10 dựa trên 8 thành viên đánh giá"
+                                                data-action="click->anime-card#showLibraryEditor"><i
+                                                    class="fa fa-star"></i>8.9</div>
+                                        </div>
+                                    </div>
+                                    <div class="Title">One Piece Movie 5: Norowareta Seiken</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 128px;">
+                        <div class="TPostMv">
+                            <div class="TPost B">
+                                <a href="https://animevietsub.io/phim/one-piece-movie-6-omatsuri-danshaku-to-himitsu-no-shima-i2-a2062/"
+                                    title="One Piece Movie 6: Omatsuri Danshaku to Himitsu no Shima (2005)">
+                                    <div class="Image">
+                                        <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="180" height="260"
+                                                src="https://cdn.animevietsub.io/data/poster/2017/09/17/animevsub-LtwLR8UqaS.jpg"
+                                                class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                                                alt="One Piece Movie 6: Omatsuri Danshaku to Himitsu no Shima (2005)">
+                                        </figure>
+                                        <span class="mli-quality">HD</span>
+                                        <div class="anime-extras">
+                                            <div class="anime-avg-user-rating"
+                                                title="9.4 trong số 10 dựa trên 15 thành viên đánh giá"
+                                                data-action="click->anime-card#showLibraryEditor"><i
+                                                    class="fa fa-star"></i>9.4</div>
+                                        </div>
+                                    </div>
+                                    <div class="Title">One Piece Movie 6: Omatsuri Danshaku to Himitsu no Shima</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 128px;">
+                        <div class="TPostMv">
+                            <div class="TPost B">
+                                <a href="https://animevietsub.io/phim/one-piece-movie-7-karakuri-jou-no-mecha-kyohei-i3-a2063/"
+                                    title="One Piece Movie 7: Karakuri-jou no Mecha Kyohei (2006)">
+                                    <div class="Image">
+                                        <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="180" height="260"
+                                                src="https://cdn.animevietsub.io/data/poster/2017/09/17/animevsub-Kh6MZFqu9v.jpg"
+                                                class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                                                alt="One Piece Movie 7: Karakuri-jou no Mecha Kyohei (2006)"></figure>
+                                        <span class="mli-quality">HD</span>
+                                        <div class="anime-extras">
+                                            <div class="anime-avg-user-rating"
+                                                title="9.9 trong số 10 dựa trên 11 thành viên đánh giá"
+                                                data-action="click->anime-card#showLibraryEditor"><i
+                                                    class="fa fa-star"></i>9.9</div>
+                                        </div>
+                                    </div>
+                                    <div class="Title">One Piece Movie 7: Karakuri-jou no Mecha Kyohei</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 128px;">
+                        <div class="TPostMv">
+                            <div class="TPost B">
+                                <a href="https://animevietsub.io/phim/one-piece-movie-8-episode-of-alabasta-sabaku-no-oujo-to-kaizoku-tachi-i3-a2064/"
+                                    title="One Piece Movie 8: Episode of Alabasta - Sabaku no Oujo to Kaizoku-tachi (2007)">
+                                    <div class="Image">
+                                        <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="180" height="260"
+                                                src="https://cdn.animevietsub.io/data/poster/2017/09/17/animevsub-stUzG1qMra.jpg"
+                                                class="attachment-img-mov-md size-img-mov-md wp-post-image"
+                                                alt="One Piece Movie 8: Episode of Alabasta - Sabaku no Oujo to Kaizoku-tachi (2007)">
+                                        </figure>
+                                        <span class="mli-quality">HD</span>
+                                        <div class="anime-extras">
+                                            <div class="anime-avg-user-rating"
+                                                title="10 trong số 10 dựa trên 9 thành viên đánh giá"
+                                                data-action="click->anime-card#showLibraryEditor"><i
+                                                    class="fa fa-star"></i>10</div>
+                                        </div>
+                                    </div>
+                                    <div class="Title">One Piece Movie 8: Episode of Alabasta - Sabaku no Oujo to
+                                        Kaizoku-tachi</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-controls clickable">
+                <div class="owl-pagination">
+                    <div class="owl-page active"><span class=""></span></div>
+                    <div class="owl-page"><span class=""></span></div>
+                </div>
+                <div class="owl-buttons">
+                    <div class="owl-prev"><i class="fa fa-angle-left"></i></div>
+                    <div class="owl-next"><i class="fa fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v19.0"
+    nonce="hfSiW2ZL"></script>
+{{!-- </div>
+<div class="fb-comments" data-href="https://ghibli.id.vn/phim/{{movie.slug}}" data-width="" data-numposts="10">
+</div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v19.0&appId=330287969665869"
+    nonce="2BJUBbqa"></script> --}}
+{{!-- <input type="hidden" value="{&quot;file&quot;:&quot;/video/Mashle_2nd_Season_tap3.mp4&quot;}" name="src_fbo">
+<input type="hidden" value="{&quot;file&quot;:&quot;/video/Mashle_2nd_Season_tap3.mp4&quot;}" name="src_an0">
+
+<script type="text/javascript" src="https://wibu47.com/assets/js/jwplayer.js"></script>
+<script type="text/javascript">
+    jwplayer.key = "ITWMv7t88JGzI0xPwW8I0+LveiXX9SWbfdmt0ArUSyc=";
+</script>
+<script>
+    var HLS = "";
+    var EMB = "";
+    var LOT = "";
+    var HYDRAX = "https://playhydrax.com/?v=WSwd_S7x-a";
+    var VPRO = "";
+    var TIK = "https://rapovideo.xyz/playlist/65dabf1508342229f23c2d31/master.m3u8";
+    var AHS = "";
+</script>
+<script src="https://wibu47.com/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://wibu47.com/assets/js/main.js?v=1.1.20240302144513"></script> --}}
