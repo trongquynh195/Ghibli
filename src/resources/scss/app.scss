@@ -973,7 +973,6 @@ input[type=submit],
 .InfoList strong,
 .ListSocial a,
 .MenuFt>ul>li>a:hover,
-.MnBr .Menu>ul>li>a,
 .Qlty,
 .Search .Form-Icon input,
 .TPlayer .Title,
@@ -1007,7 +1006,7 @@ input[type=submit] {
     width: auto;
     display: inline-block;
     text-align: center;
-    line-height: 37px;
+    line-height: 25px;
     border-radius: 25px;
 }
 
@@ -2464,7 +2463,7 @@ h4 {
 }
 
 .containers .form p a {
-    font-weight: 500;
+    font-weight: 700;
     color: black;
 }
 

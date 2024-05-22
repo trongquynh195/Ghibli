@@ -78,40 +78,40 @@ class authController {
     }
 
 
-     loginUsser(req, res){
-        // res.json(req.body);
-        Promise.all([
-            User.findOne({username: req.body.username})
-        ])
-        .then(async ([user])=>{
-            if(!user){
-                res.json("Lỗi 01");
+     async loginUsser(req, res) {
+        try {
+            const user = await User.findOne({ username: req.body.username });
+
+            if (!user) {
+                return res.status(400).json({ message: "Tên tài khoản không tồn tại hoặc Mật khẩu không chính xác" });
             }
-            const valibpasswod = await bcrypt.compare(req.body.password,user.password);
-            if(!valibpasswod){
-                res.json("Lỗi 02");
+
+            const validPassword = await bcrypt.compare(req.body.password, user.password);
+
+            if (!validPassword) {
+                return res.status(400).json({ message: "Tên tài khoản không tồn tại hoặc Mật khẩu không chính xác" });
             }
-            if(user && valibpasswod){
-                req.session.user = user;
-                // res.status(200).json(req.session.user);
-                res.redirect('/');
-            }
-        })
-        .catch((err) => {
+
+            req.session.user = user;
+            res.redirect('/');
+        } catch (err) {
             res.status(500).json(err);
-        })
-    }  
+        }
+    }
+
     
     isAdmin(req, res, next) {
-    // Giả sử thông tin về quyền admin được lưu trong đối tượng user
-    if (req.user && req.user.admin === true) {
-        // Nếu người dùng có quyền admin, tiếp tục tiến hành
-        next();
-    } else {
-        // Nếu không, trả về mã lỗi hoặc chuyển hướng tùy thuộc vào yêu cầu của bạn
-        res.status(403).send('Trang này không tồn tại');
+        if (req.session.user) {
+            if (req.session.user.admin === true) {
+                next();
+            } else {
+                res.redirect('/');
+            }
+        } else {
+            res.redirect('/');
+        }
     }
-}
+
 }
 
 
