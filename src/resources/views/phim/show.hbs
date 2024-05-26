@@ -41,9 +41,10 @@
                 <figure class="Objf"><img width="180" height="260" src={{movie.poster}}
                         class="attachment-img-mov-md size-img-mov-md wp-post-image"
                         alt="{{movie.title}} - {{movie.subtitle}}"></figure>
-                <a href="/phim/{{movie.slug}}/tap"><i class="TpMvPlay AAIco-play_arrow show"></i></a>
+                <a href="/phim/{{movie.slug}}/tap-{{movie.InfoList.Episodes.[0].tap}}"><i
+                        class="fa-solid fa-play TpMvPlay AAIco-play_arrow show"></i></a>
                 <a class="watch_button_more" title="{{movie.title}} - {{movie.subtitle}}"
-                    href="/phim/{{movie.slug}}/tap">Xem phim
+                    href="/phim/{{movie.slug}}/tap-{{movie.InfoList.Episodes.[0].tap}}">Xem phim
                 </a>
             </div>
             <div class="Description">{{movie.description}}</div>

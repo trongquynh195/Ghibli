@@ -11,6 +11,7 @@
                                 <a href="/phim/{{this.slug}}">
                                     <div class="Image">
                                         <figure class="Objf"><img class="TPostBg" src={{this.banner}} alt="Background">
+                                            <i class="fa-solid fa-play TpMvPlay AAIco-play_arrow "></i>
                                         </figure>
                                     </div>
                                 </a>
@@ -89,8 +90,9 @@
                         <div class="Image">
                             <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="215" height="320"
                                     src={{this.poster}} class="attachment-thumbnail size-thumbnail wp-post-image"
-                                    alt="Shangri-La Frontier - Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su, Shangri-La Frontier: Crappy Game Hunter Challenges God-Tier Game (2023)"
-                                    title="Shangri-La Frontier (2023)"></figure>
+                                    alt="{{this.description}}" title="{{this.title}}">
+                                <i class="fa-solid fa-play TpMvPlay AAIco-play_arrow "></i>
+                            </figure>
                             <span class="mli-eps">TẬP<i>
                                     {{#with this.InfoList.Episodes as |episodes|}}
                                     {{#each episodes as |episode|}}
@@ -130,7 +132,9 @@
                             <figure class="Objf TpMvPlay AAIco-play_arrow"><img width="215" height="320"
                                     src={{this.poster}} class="attachment-thumbnail size-thumbnail wp-post-image"
                                     alt="Shangri-La Frontier - Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su, Shangri-La Frontier: Crappy Game Hunter Challenges God-Tier Game (2023)"
-                                    title="Shangri-La Frontier (2023)"></figure>
+                                    title="Shangri-La Frontier (2023)">
+                                <i class="fa-solid fa-play TpMvPlay AAIco-play_arrow "></i>
+                            </figure>
                             <span class="mli-quality">{{this.InfoList.Quality}}</span>
                             <div class="anime-extras">
                                 <div class="anime-avg-user-rating"

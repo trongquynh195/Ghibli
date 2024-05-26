@@ -1182,18 +1182,6 @@ p.Info>span .fa,
 }
 
 
-[class*=AAIco-]:before,
-.wp-pagenavi a.first:before,
-.wp-pagenavi a.previouspostslink:before,
-.wp-pagenavi a.nextpostslink:before,
-.wp-pagenavi a.last:before,
-.sol-caret:before,
-.sol-quick-delete,
-.comment-reply-link:before,
-.tr-delete {
-    font-family: material icons;
-}
-
 .Button {
     border-radius: 3px !important;
 }
@@ -2027,7 +2015,7 @@ section .Top a.STPb {
 
 .TPost.A .Image {
     position: absolute;
-    width: 65px;
+    width: 55px;
     left: 0;
     top: 0;
 }
@@ -2599,4 +2587,164 @@ input {
 
 .tab-login .bor-form input.lg-pass {
     background: url(../img/icon-pass.png) no-repeat 0 center;
+}
+
+/*------------------------------ lọc tìm kiếm----------------------------------*/
+.ml-title {
+    margin-bottom: 10px;
+}
+
+.ml-title span {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: alata;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    color: #333;
+    border-radius: 3px 3px 0 0;
+}
+
+.filter-toggle {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    background: #fff;
+}
+
+.mr5 {
+    margin-right: 5px;
+}
+
+#filter .filter-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+
+#filter {
+    padding: 10px 20px;
+    background: #fff;
+    position: relative;
+    padding-bottom: 110px;
+    box-shadow: 0 3px 0 0 rgba(0, 0, 0, .1);
+    border-radius: 3px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+#filter ul {
+    list-style: none;
+    padding: 10px 15px 8px;
+    border: 1px solid #e5e5e5;
+    background: #f8f8f8;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+#filter ul li {
+    float: left;
+    width: 130px;
+    padding: 3px 5px 3px 2px;
+    margin: 0 0 5px;
+    width: auto;
+    margin-right: 5px;
+}
+
+#filter ul li label {
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+#filter ul li label input {
+    margin: 0 3px 0 0;
+    vertical-align: text-top;
+}
+
+#filter ul.fc-main-list {
+    padding: 0;
+    border: none;
+    overflow: visible;
+    background: 0 0;
+}
+
+#filter ul.fc-main-list li {
+    display: block;
+    width: 100%;
+    padding: 0;
+    float: none;
+    margin-bottom: 5px;
+}
+
+#filter ul.fc-main-list li a {
+    font-size: 14px;
+    background: #eee;
+    color: #333;
+    display: block;
+    padding: 7px 10px;
+}
+
+#filter .cs10-top .fc-filmtype {
+    float: left;
+    width: 50%;
+}
+
+#filter .cs10-top .fc-quality {
+    margin-left: 52%;
+}
+
+#filter.active {
+    display: block !important;
+}
+
+.TpMvPlay:before {
+    box-shadow: 0 0 0 2px #fff, 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.TpMvPlay:before {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.TPost .show.TpMvPlay:before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.TpMvPlay:before,
+.TpMvPlay:after {
+    transition: .2s;
+    opacity: 0;
+}
+
+.TpMvPlay:after {
+    background-color: #263238;
+}
+
+.TpMvPlay:hover:after {
+    opacity: 0.3;
+}
+
+.TpMvPlay:before {
+    color: #fff;
+}
+
+.TpMvPlay:hover i.TpMvPlay:before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.NoBrdRa .TpMvPlay:after {
+    border-radius: 3px !important;
 }

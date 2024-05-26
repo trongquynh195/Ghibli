@@ -58,7 +58,7 @@ class genreController {
             
             // res.json(seasonData);
             // Render trang và truyền cả hai loại dữ liệu vào
-            res.render('genre/show', { 
+            res.render('season/show', { 
                 actionMovies:actionMovies.slice(startIndex,startIndex+30),
                 top_bo: animeboData.slice(0, 5),
                 top_le: animeleData.slice(0, 5),
